@@ -1,4 +1,5 @@
-
+Youtube
+https://www.youtube.com/watch?v=mZoOnWjv_QM
 ```
 docker scout cves $APP_NAME:$VERSION --output ./vulns.report
 docker scout cves $APP_NAME:$VERSION --only-severity critical --exit-code
