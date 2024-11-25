@@ -2,7 +2,7 @@
 # FROM nginx:latest
 
 # Use a distroless base image
-FROM cgr.dev/chainguard/nginx
+FROM cgr.dev/chainguard/nginx:latest
 
 # Copy the contents of the local 'webapp' directory into the NGINX HTML directory
 COPY ./webapp /usr/share/nginx/html
