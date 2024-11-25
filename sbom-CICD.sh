@@ -12,7 +12,7 @@ docker scout cves $APP_NAME:$VERSION --output ./vulns.report
 # Run docker scout again and set a treshhold
 docker scout cves $APP_NAME:$VERSION --only-severity critical --exit-code
 # Generate SBOM file
-docker scout sbom --output mywebapp.sbom mywebapp:SECURE
+docker scout sbom --output mywebapp.sbom $APP_NAME:$VERSION
 			
 #TEST: Run the container
 docker run -d -p 8182:80 --name webapp $APP_NAME:$VERSION
