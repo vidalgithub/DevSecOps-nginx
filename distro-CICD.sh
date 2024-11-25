@@ -12,5 +12,7 @@ docker scout cves $APP_NAME:$VERSION --output ./vulns.report
 # Run docker scout again and set a treshhold
 docker scout cves $APP_NAME:$VERSION --only-severity critical --exit-code
 			
-#TEST: Run the container
+# Remove existing container if it exists
+docker rm -f webapp 2>/dev/null || true
+#TEST: Run a new container
 docker run -d -p 8182:80 --name webapp $APP_NAME:$VERSION
